@@ -18,7 +18,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class User_01_Register_Login_Design_Pattern extends BasePage{
+public class User_01_Register_Design_Pattern extends BasePage{
 
 	private HomePageObject homePage;
 	private RegisterPageObject registerPage;
@@ -38,7 +38,6 @@ public class User_01_Register_Login_Design_Pattern extends BasePage{
 		driver.get("https://demo.nopcommerce.com/");	
 		
 		homePage = new HomePageObject(driver);
-		registerPage = new RegisterPageObject(driver);
 		firstName = "AutomationFcStudent";
 		lastName = "Loc";
 		emailAddress ="afc" + generateFakeNumber() + "@gmail.com";
@@ -51,7 +50,7 @@ public class User_01_Register_Login_Design_Pattern extends BasePage{
 		System.out.println("Register_01 - Step 01: Click to Regsiter link");
 		homePage.clickToRegisterLink();
 //		click Register button
-		
+		registerPage = new RegisterPageObject(driver);
 		System.out.println("Register_01 - Step 02: Click to Register Button");
 		registerPage.clickToRegisterButton();
 //		Verify text
@@ -68,7 +67,8 @@ public class User_01_Register_Login_Design_Pattern extends BasePage{
 //		goto register page
 		System.out.println("Register_02 - Step 01:Click to Regsiter link");
 		homePage.clickToRegisterLink();
-		
+		registerPage = new RegisterPageObject(driver);
+
 //		Input data 
 		System.out.println("Register_02 - Step 02: Input to required fields");
 		registerPage.inputToFirstNameTextbox(firstName);
@@ -91,7 +91,8 @@ public class User_01_Register_Login_Design_Pattern extends BasePage{
 //		goto register page
 		System.out.println("Home Page - Step 01:Click to Regsiter link");
 		homePage.clickToRegisterLink();
-		
+		registerPage = new RegisterPageObject(driver);
+
 //		Input data 
 		System.out.println("Register_03 - Step 02: Input to required fields");
 		registerPage.inputToFirstNameTextbox(firstName);
@@ -116,6 +117,8 @@ public class User_01_Register_Login_Design_Pattern extends BasePage{
 //		goto register page
 		System.out.println("Register_04 - Step 01:Click to Regsiter link");
 		homePage.clickToRegisterLink();
+		registerPage = new RegisterPageObject(driver);
+
 //		Input data 
 		System.out.println("Register_04 - Step 02: Input to required fields");
 		registerPage.inputToFirstNameTextbox(firstName);
@@ -136,6 +139,8 @@ public class User_01_Register_Login_Design_Pattern extends BasePage{
 //		goto register page
 		System.out.println("Register_05 - Step 01:Click to Regsiter link");
 		homePage.clickToRegisterLink();
+		registerPage = new RegisterPageObject(driver);
+
 //		Input data 
 		System.out.println("Register_05 - Step 02: Input to required fields");
 		registerPage.inputToFirstNameTextbox(firstName);
@@ -156,6 +161,8 @@ public class User_01_Register_Login_Design_Pattern extends BasePage{
 //		goto register page
 		System.out.println("Register_06 - Step 01:Click to Regsiter link");
 		homePage.clickToRegisterLink();
+		registerPage = new RegisterPageObject(driver);
+
 //		Input data
 		System.out.println("Register_06 - Step 02: Input to required fields");
 		registerPage.inputToFirstNameTextbox(firstName);

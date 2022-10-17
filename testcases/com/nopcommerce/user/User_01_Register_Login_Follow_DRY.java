@@ -55,11 +55,11 @@ public class User_01_Register_Login_Follow_DRY {
 		basePage.waitForEnableClickable(driver, "//a[@class='ico-register']");
 		basePage.clickToElement(driver, "//a[@class='ico-register']");
 //		Input data 
-		basePage.sendkeyToElement(driver, "//input[@id='FirstName']", "AutomationFcStudent");
-		basePage.sendkeyToElement(driver, "//input[@id='LastName']", "Loc");
-		basePage.sendkeyToElement(driver, "//input[@id='Email']", "123@123!@#");
-		basePage.sendkeyToElement(driver, "//input[@id='Password']", "123456");
-		basePage.sendkeyToElement(driver, "//input[@id='ConfirmPassword']", "123456");
+		basePage.sendKeyToElement(driver, "//input[@id='FirstName']", "AutomationFcStudent");
+		basePage.sendKeyToElement(driver, "//input[@id='LastName']", "Loc");
+		basePage.sendKeyToElement(driver, "//input[@id='Email']", "123@123!@#");
+		basePage.sendKeyToElement(driver, "//input[@id='Password']", "123456");
+		basePage.sendKeyToElement(driver, "//input[@id='ConfirmPassword']", "123456");
 		
 //		click Register button
 		basePage.waitForEnableClickable(driver, "//button[@id='register-button']");
@@ -74,11 +74,11 @@ public class User_01_Register_Login_Follow_DRY {
 		basePage.waitForEnableClickable(driver, "//a[@class='ico-register']");
 		basePage.clickToElement(driver, "//a[@class='ico-register']");
 //		Input data 
-		basePage.sendkeyToElement(driver, "//input[@id='FirstName']", "AutomationFcStudent");
-		basePage.sendkeyToElement(driver, "//input[@id='LastName']", "Loc");
-		basePage.sendkeyToElement(driver, "//input[@id='Email']", emailAddress);
-		basePage.sendkeyToElement(driver, "//input[@id='Password']", "123456");
-		basePage.sendkeyToElement(driver, "//input[@id='ConfirmPassword']", "123456");
+		basePage.sendKeyToElement(driver, "//input[@id='FirstName']", "AutomationFcStudent");
+		basePage.sendKeyToElement(driver, "//input[@id='LastName']", "Loc");
+		basePage.sendKeyToElement(driver, "//input[@id='Email']", emailAddress);
+		basePage.sendKeyToElement(driver, "//input[@id='Password']", "123456");
+		basePage.sendKeyToElement(driver, "//input[@id='ConfirmPassword']", "123456");
 		
 //		click Register button
 		basePage.waitForEnableClickable(driver, "//button[@id='register-button']");
@@ -96,11 +96,11 @@ public class User_01_Register_Login_Follow_DRY {
 		basePage.waitForEnableClickable(driver, "//a[@class='ico-register']");
 		basePage.clickToElement(driver, "//a[@class='ico-register']");
 //		Input data 
-		basePage.sendkeyToElement(driver, "//input[@id='FirstName']", "AutomationFcStudent");
-		basePage.sendkeyToElement(driver, "//input[@id='LastName']", "Loc");
-		basePage.sendkeyToElement(driver, "//input[@id='Email']", emailAddress);
-		basePage.sendkeyToElement(driver, "//input[@id='Password']", "123456");
-		basePage.sendkeyToElement(driver, "//input[@id='ConfirmPassword']", "123456");
+		basePage.sendKeyToElement(driver, "//input[@id='FirstName']", "AutomationFcStudent");
+		basePage.sendKeyToElement(driver, "//input[@id='LastName']", "Loc");
+		basePage.sendKeyToElement(driver, "//input[@id='Email']", emailAddress);
+		basePage.sendKeyToElement(driver, "//input[@id='Password']", "123456");
+		basePage.sendKeyToElement(driver, "//input[@id='ConfirmPassword']", "123456");
 		
 //		click Register button
 		basePage.waitForEnableClickable(driver, "//button[@id='register-button']");
@@ -115,11 +115,11 @@ public class User_01_Register_Login_Follow_DRY {
 		basePage.waitForEnableClickable(driver, "//a[@class='ico-register']");
 		basePage.clickToElement(driver, "//a[@class='ico-register']");
 //		Input data 
-		basePage.sendkeyToElement(driver, "//input[@id='FirstName']", "AutomationFcStudent");
-		basePage.sendkeyToElement(driver, "//input[@id='LastName']", "Loc");
-		basePage.sendkeyToElement(driver, "//input[@id='Email']", emailAddress);
-		basePage.sendkeyToElement(driver, "//input[@id='Password']", "123");
-		basePage.sendkeyToElement(driver, "//input[@id='ConfirmPassword']", "123");
+		basePage.sendKeyToElement(driver, "//input[@id='FirstName']", "AutomationFcStudent");
+		basePage.sendKeyToElement(driver, "//input[@id='LastName']", "Loc");
+		basePage.sendKeyToElement(driver, "//input[@id='Email']", emailAddress);
+		basePage.sendKeyToElement(driver, "//input[@id='Password']", "123");
+		basePage.sendKeyToElement(driver, "//input[@id='ConfirmPassword']", "123");
 //		click Register button
 		basePage.waitForEnableClickable(driver, "//button[@id='register-button']");
 		basePage.clickToElement(driver, "//button[@id='register-button']");
@@ -133,11 +133,11 @@ public class User_01_Register_Login_Follow_DRY {
 		basePage.waitForEnableClickable(driver, "//a[@class='ico-register']");
 		basePage.clickToElement(driver, "//a[@class='ico-register']");
 //		Input data 
-		basePage.sendkeyToElement(driver, "//input[@id='FirstName']", "AutomationFcStudent");
-		basePage.sendkeyToElement(driver, "//input[@id='LastName']", "Loc");
-		basePage.sendkeyToElement(driver, "//input[@id='Email']", emailAddress);
-		basePage.sendkeyToElement(driver, "//input[@id='Password']", "123456");
-		basePage.sendkeyToElement(driver, "//input[@id='ConfirmPassword']", "654321");
+		basePage.sendKeyToElement(driver, "//input[@id='FirstName']", "AutomationFcStudent");
+		basePage.sendKeyToElement(driver, "//input[@id='LastName']", "Loc");
+		basePage.sendKeyToElement(driver, "//input[@id='Email']", emailAddress);
+		basePage.sendKeyToElement(driver, "//input[@id='Password']", "123456");
+		basePage.sendKeyToElement(driver, "//input[@id='ConfirmPassword']", "654321");
 		
 //		click Register button
 		basePage.waitForEnableClickable(driver, "//button[@id='register-button']");

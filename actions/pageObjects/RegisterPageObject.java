@@ -46,32 +46,32 @@ public class RegisterPageObject extends BasePage {
 	public void inputToFirstNameTextbox(String firstName) {
 		// TODO Auto-generated method stub
 		waitForElementVisible(driver, RegisterPageUI.FIRST_NAME_TEXTBOX);
-		sendkeyToElement(driver, RegisterPageUI.FIRST_NAME_TEXTBOX, firstName);
+		sendKeyToElement(driver, RegisterPageUI.FIRST_NAME_TEXTBOX, firstName);
 	}
 
 	public void inputToLastNameTextbox(String lastName) {
 		// TODO Auto-generated method stub
 		waitForElementVisible(driver, RegisterPageUI.LAST_NAME_TEXTBOX);
-		sendkeyToElement(driver, RegisterPageUI.LAST_NAME_TEXTBOX, lastName);
+		sendKeyToElement(driver, RegisterPageUI.LAST_NAME_TEXTBOX, lastName);
 	}
 
 	public void inputToEmailTextbox(String emailAddress) {
 		// TODO Auto-generated method stub
 		waitForElementVisible(driver, RegisterPageUI.EMAIL_TEXTBOX);
-		sendkeyToElement(driver, RegisterPageUI.EMAIL_TEXTBOX, emailAddress);
+		sendKeyToElement(driver, RegisterPageUI.EMAIL_TEXTBOX, emailAddress);
 	}
 
 	public void inputToPasswordTextbox(String password) {
 		// TODO Auto-generated method stub
 		waitForElementVisible(driver, RegisterPageUI.PASSWORD_TEXTBOX);
-		sendkeyToElement(driver, RegisterPageUI.PASSWORD_TEXTBOX, password);
+		sendKeyToElement(driver, RegisterPageUI.PASSWORD_TEXTBOX, password);
 	}
 
 
 	public void inputToConfirmPasswordTextbox(String confirmPassword) {
 		// TODO Auto-generated method stub
 		waitForElementVisible(driver, RegisterPageUI.CONFIRM_PASSWORD_TEXTBOX);
-		sendkeyToElement(driver, RegisterPageUI.CONFIRM_PASSWORD_TEXTBOX, confirmPassword);
+		sendKeyToElement(driver, RegisterPageUI.CONFIRM_PASSWORD_TEXTBOX, confirmPassword);
 	}
 
 	public String getRegisterSuccessMessage() {
