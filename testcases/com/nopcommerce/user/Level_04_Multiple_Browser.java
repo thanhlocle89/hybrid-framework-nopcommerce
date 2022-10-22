@@ -24,7 +24,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class Multiple_Browser extends BaseTest {
+public class Level_04_Multiple_Browser extends BaseTest {
 
 	private HomePageObject homePage;
 	private RegisterPageObject registerPage;

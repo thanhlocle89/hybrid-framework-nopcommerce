@@ -44,32 +44,27 @@ public class RegisterPageObject extends BasePage {
 	}
 
 	public void inputToFirstNameTextbox(String firstName) {
-		// TODO Auto-generated method stub
 		waitForElementVisible(driver, RegisterPageUI.FIRST_NAME_TEXTBOX);
 		sendKeyToElement(driver, RegisterPageUI.FIRST_NAME_TEXTBOX, firstName);
 	}
 
 	public void inputToLastNameTextbox(String lastName) {
-		// TODO Auto-generated method stub
 		waitForElementVisible(driver, RegisterPageUI.LAST_NAME_TEXTBOX);
 		sendKeyToElement(driver, RegisterPageUI.LAST_NAME_TEXTBOX, lastName);
 	}
 
 	public void inputToEmailTextbox(String emailAddress) {
-		// TODO Auto-generated method stub
 		waitForElementVisible(driver, RegisterPageUI.EMAIL_TEXTBOX);
 		sendKeyToElement(driver, RegisterPageUI.EMAIL_TEXTBOX, emailAddress);
 	}
 
 	public void inputToPasswordTextbox(String password) {
-		// TODO Auto-generated method stub
 		waitForElementVisible(driver, RegisterPageUI.PASSWORD_TEXTBOX);
 		sendKeyToElement(driver, RegisterPageUI.PASSWORD_TEXTBOX, password);
 	}
 
 
 	public void inputToConfirmPasswordTextbox(String confirmPassword) {
-		// TODO Auto-generated method stub
 		waitForElementVisible(driver, RegisterPageUI.CONFIRM_PASSWORD_TEXTBOX);
 		sendKeyToElement(driver, RegisterPageUI.CONFIRM_PASSWORD_TEXTBOX, confirmPassword);
 	}
@@ -79,9 +74,11 @@ public class RegisterPageObject extends BasePage {
 		return getElementText(driver, RegisterPageUI.REGISTER_SUCCESS_MESSAGE);
 	}
 
-	public void clickToLogoutlink() {
+	public HomePageObject clickToLogoutlink() {
 		waitForEnableClickable(driver, RegisterPageUI.LOGOUT_LINK);
 		clickToElement(driver, RegisterPageUI.LOGOUT_LINK);
+//		return new HomePageObject(driver);
+		return PageGeneratorManager.getHomePage(driver);
 	}
 
 	public String getErrorExistingEmailMessage() {

@@ -3,11 +3,13 @@ package com.nopcommerce.user;
 import org.testng.annotations.Test;
 
 import commons.BasePage;
+import commons.BaseTest;
 import pageObjects.HomePageObject;
 import pageObjects.LoginPageObject;
 import pageObjects.RegisterPageObject;
 
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
 import static org.testng.Assert.assertEquals;
 
@@ -21,7 +23,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class User_01_Login_Design_Pattern extends BasePage{
+public class Level_03_PageObject_02_Login extends BaseTest{
 
 	private HomePageObject homePage;
 	private RegisterPageObject registerPage;
@@ -33,14 +35,10 @@ public class User_01_Login_Design_Pattern extends BasePage{
 	private String lastName;
 	private String password;
 	
+	@Parameters("browser")
 	@BeforeClass
-	public void beforeClass() {
-		System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDriver\\geckodriver.exe");
-		driver = new FirefoxDriver();
-		
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get("https://demo.nopcommerce.com/");	
-		
+	public void beforeClass(String browserName) {
+		driver = getBrowserDriver(browserName);
 		homePage = new HomePageObject(driver);
 		firstName = "AutomationFcStudent";
 		lastName = "Loc";
@@ -49,12 +47,10 @@ public class User_01_Login_Design_Pattern extends BasePage{
 		existingEmailAddress ="afc" + generateFakeNumber() + "@gmail.com";
 		password = "123456";
 		
-//		goto register page
 		System.out.println("Precondition - Step 01:Click to Regsiter link");
 		homePage.clickToRegisterLink();
 		registerPage = new RegisterPageObject(driver);
 		
-//		Input data 
 		System.out.println("Precondition - Step 02: Input to required fields");
 		registerPage.inputToFirstNameTextbox(firstName);
 		registerPage.inputToLastNameTextbox(lastName);

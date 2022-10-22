@@ -18,7 +18,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class User_01_Register_Design_Pattern extends BasePage{
+public class Level_02_User_01_Apply_BasePageIII extends BasePage{
 
 	private HomePageObject homePage;
 	private RegisterPageObject registerPage;
