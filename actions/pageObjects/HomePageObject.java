@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
 import pageUIs.HomePageUI;
+import pageUIs.CustomerInfoPageUI;
 
 public class HomePageObject extends BasePage{
 	private WebDriver driver;
@@ -28,6 +29,11 @@ public class HomePageObject extends BasePage{
 	public boolean isMyAccountLinkDisplayed() {
 		waitForElementVisible(driver, HomePageUI.MY_ACCOUNT_LINK);
 		return isElementDisplayed(driver,  HomePageUI.MY_ACCOUNT_LINK);
+	}
+	public CustomerInfoPageObject clickToGoCustomerInforPage() {
+		waitForEnableClickable(driver, HomePageUI.MY_ACCOUNT_LINK);
+		clickToElement(driver, HomePageUI.MY_ACCOUNT_LINK);
+		return PageGeneratorManager.getMyAccountPage(driver);
 	}
 
 
