@@ -3,8 +3,8 @@ package com.nopcommerce.user;
 import org.testng.annotations.Test;
 
 import commons.BasePage;
-import pageObjects.HomePageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects.nopCommer.user.UserHomePageObject;
+import pageObjects.nopCommer.user.UserRegisterPageObject;
 
 import org.testng.annotations.BeforeClass;
 
@@ -20,8 +20,8 @@ import org.testng.annotations.AfterClass;
 
 public class Level_02_User_01_Apply_BasePageIII extends BasePage{
 
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
 	private WebDriver driver;
 	private String projectPath = System.getProperty("user.dir");
 	private String emailAddress;
@@ -37,7 +37,7 @@ public class Level_02_User_01_Apply_BasePageIII extends BasePage{
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get("https://demo.nopcommerce.com/");	
 		
-		homePage = new HomePageObject(driver);
+		homePage = new UserHomePageObject(driver);
 		firstName = "AutomationFcStudent";
 		lastName = "Loc";
 		emailAddress ="afc" + generateFakeNumber() + "@gmail.com";
@@ -48,9 +48,9 @@ public class Level_02_User_01_Apply_BasePageIII extends BasePage{
 	public void Register_01_Empty_Data() {
 //		goto register page
 		System.out.println("Register_01 - Step 01: Click to Regsiter link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 //		click Register button
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 		System.out.println("Register_01 - Step 02: Click to Register Button");
 		registerPage.clickToRegisterButton();
 //		Verify text
@@ -66,8 +66,8 @@ public class Level_02_User_01_Apply_BasePageIII extends BasePage{
 	public void Register_02_Invalid_Email() {
 //		goto register page
 		System.out.println("Register_02 - Step 01:Click to Regsiter link");
-		homePage.clickToRegisterLink();
-		registerPage = new RegisterPageObject(driver);
+		homePage.openRegisterPage();
+		registerPage = new UserRegisterPageObject(driver);
 
 //		Input data 
 		System.out.println("Register_02 - Step 02: Input to required fields");
@@ -90,8 +90,8 @@ public class Level_02_User_01_Apply_BasePageIII extends BasePage{
 	public void Register_03_Success() {
 //		goto register page
 		System.out.println("Home Page - Step 01:Click to Regsiter link");
-		homePage.clickToRegisterLink();
-		registerPage = new RegisterPageObject(driver);
+		homePage.openRegisterPage();
+		registerPage = new UserRegisterPageObject(driver);
 
 //		Input data 
 		System.out.println("Register_03 - Step 02: Input to required fields");
@@ -116,8 +116,8 @@ public class Level_02_User_01_Apply_BasePageIII extends BasePage{
 	public void Register_04_Existing_Email() {
 //		goto register page
 		System.out.println("Register_04 - Step 01:Click to Regsiter link");
-		homePage.clickToRegisterLink();
-		registerPage = new RegisterPageObject(driver);
+		homePage.openRegisterPage();
+		registerPage = new UserRegisterPageObject(driver);
 
 //		Input data 
 		System.out.println("Register_04 - Step 02: Input to required fields");
@@ -138,8 +138,8 @@ public class Level_02_User_01_Apply_BasePageIII extends BasePage{
 	public void Register_05_Password_Less_Than_6_Chars() {
 //		goto register page
 		System.out.println("Register_05 - Step 01:Click to Regsiter link");
-		homePage.clickToRegisterLink();
-		registerPage = new RegisterPageObject(driver);
+		homePage.openRegisterPage();
+		registerPage = new UserRegisterPageObject(driver);
 
 //		Input data 
 		System.out.println("Register_05 - Step 02: Input to required fields");
@@ -160,8 +160,8 @@ public class Level_02_User_01_Apply_BasePageIII extends BasePage{
 	public void Register_06_Invalid_Confirm_Password() {	
 //		goto register page
 		System.out.println("Register_06 - Step 01:Click to Regsiter link");
-		homePage.clickToRegisterLink();
-		registerPage = new RegisterPageObject(driver);
+		homePage.openRegisterPage();
+		registerPage = new UserRegisterPageObject(driver);
 
 //		Input data
 		System.out.println("Register_06 - Step 02: Input to required fields");

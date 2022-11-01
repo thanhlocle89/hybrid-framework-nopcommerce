@@ -16,7 +16,10 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageObjects.nopCommer.user.UserAddressPageObject;
+import pageObjects.nopCommer.user.UserCustomerInfoPageObject;
 import pageObjects.nopCommer.user.UserHomePageObject;
+import pageObjects.nopCommer.user.UserMyProductReviewPageObject;
+import pageObjects.nopCommer.user.UserRewardPointPageObject;
 import pageUIs.nopCommer.user.BasePageUI;
 import pageObjects.nopCommer.admin.AdminLoginPageObject;
 import pageObjects.nopCommer.user.PageGeneratorManager;
@@ -430,6 +433,24 @@ public class BasePage {
 		clickToElement(driver, BasePageUI.ADDRESS_LINK);
 		return PageGeneratorManager.getUserAddressPage(driver);
 	}
+	
+	public UserMyProductReviewPageObject openUserMyProductReviewPage(WebDriver driver) {
+		waitForEnableClickable(driver, BasePageUI.MY_PRODUCT_REVIEW_LINK);
+		clickToElement(driver, BasePageUI.MY_PRODUCT_REVIEW_LINK);
+		return PageGeneratorManager.getUserMyProductReview(driver);
+	}
+	
+	public UserCustomerInfoPageObject openUserCustomerInfoPage(WebDriver driver) {
+		waitForEnableClickable(driver, BasePageUI.CUSTOMER_INFOR_LINK);
+		clickToElement(driver, BasePageUI.CUSTOMER_INFOR_LINK);
+		return PageGeneratorManager.getCustomerInfoPage(driver);
+	}
+	
+	public UserRewardPointPageObject openUserRewardPointPage(WebDriver driver) {
+		waitForEnableClickable(driver, BasePageUI.REWARD_POINT_LINK);
+		clickToElement(driver, BasePageUI.REWARD_POINT_LINK);
+		return PageGeneratorManager.getUserRewardPointPage(driver);
+	}
 
 	public BasePage openPagesAtMyAccountByName(WebDriver driver, String pageName) {
 		waitForEnableClickable(driver, BasePageUI.DYNAMIC_LINKS_MY_ACCOUNT_PAGE, pageName);
@@ -438,7 +459,7 @@ public class BasePage {
 		switch (pageName) {
 		case "Addresses":
 			return PageGeneratorManager.getUserAddressPage(driver);
-		case "Customer infor":
+		case "Customer info":
 			return PageGeneratorManager.getCustomerInfoPage(driver);
 		case "My product reviews":
 			return PageGeneratorManager.getUserMyProductReview(driver);
@@ -448,6 +469,11 @@ public class BasePage {
 		default:
 			throw new RuntimeException("Invalid page name at Customer area.");
 		}
+	}
+	
+	public void openPagesAtMyAccountByPageName(WebDriver driver, String pageName) {
+		waitForEnableClickable(driver, BasePageUI.DYNAMIC_LINKS_MY_ACCOUNT_PAGE, pageName);
+		clickToElement(driver, BasePageUI.DYNAMIC_LINKS_MY_ACCOUNT_PAGE, pageName);
 	}
 
 	public UserHomePageObject clickToLogoutAtUserPage(WebDriver driver) {

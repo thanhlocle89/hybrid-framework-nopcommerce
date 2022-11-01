@@ -1,39 +1,22 @@
-package pageObjects;
+package pageObjects.nopCommer.user;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.HomePageUI;
-import pageUIs.LoginPageUI;
+import pageUIs.nopCommer.user.HomePageUI;
+import pageUIs.nopCommer.user.LoginPageUI;
 
-public class LoginPageObject extends BasePage{
+public class UserLoginPageObject extends BasePage {
 
 	private WebDriver driver;
 
-	public LoginPageObject(WebDriver driver) {
+	public UserLoginPageObject(WebDriver driver) {
 		this.driver = driver;
 	}
 
-	public HomePageObject clickToLoginButton() {
-		waitForEnableClickable(driver, LoginPageUI.LOGIN_BUTTON);
-		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
-//		return new HomePageObject(driver);
-		return PageGeneratorManager.getHomePage(driver);
-	}
-
-	public String getErrorMessageAtEmailTextbox() {
-		waitForElementVisible(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
-		return getElementText(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
-	}
-
-	public void InputToEmailTextbox(String invalidEmail) {
+	public void InputToEmailTextbox(String emailAddress) {
 		waitForElementVisible(driver, LoginPageUI.EMAIL_TEXTBOX);
-		sendKeyToElement(driver, LoginPageUI.EMAIL_TEXTBOX, invalidEmail);
-	}
-
-	public String getErrorMessageUnsuccessful() {
-		waitForElementVisible(driver, LoginPageUI.UNSUCCESSFUL_ERROR_MESSAGE);
-		return getElementText(driver, LoginPageUI.UNSUCCESSFUL_ERROR_MESSAGE);
+		sendKeyToElement(driver, LoginPageUI.EMAIL_TEXTBOX, emailAddress);
 	}
 
 	public void InputToPasswordTextbox(String password) {
@@ -41,6 +24,27 @@ public class LoginPageObject extends BasePage{
 		sendKeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, password);
 	}
 
+	public UserHomePageObject clickToLoginButton() {
+		waitForEnableClickable(driver, LoginPageUI.LOGIN_BUTTON);
+		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
+//		return new HomePageObject(driver);
+		return PageGeneratorManager.getUserHomePage(driver);
+	}
 
-	
+	public String getErrorMessageAtEmailTextbox() {
+		waitForElementVisible(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
+		return getElementText(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
+	}
+
+	public String getErrorMessageUnsuccessful() {
+		waitForElementVisible(driver, LoginPageUI.UNSUCCESSFUL_ERROR_MESSAGE);
+		return getElementText(driver, LoginPageUI.UNSUCCESSFUL_ERROR_MESSAGE);
+	}
+
+	public UserHomePageObject logInAsUser(String emailAddress, String password) {
+		InputToEmailTextbox(emailAddress);
+		InputToPasswordTextbox(password);
+		return clickToLoginButton();
+	}
+
 }

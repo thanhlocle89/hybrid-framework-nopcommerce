@@ -4,14 +4,14 @@ import org.testng.annotations.Test;
 
 import commons.BasePage;
 import commons.BaseTest;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.MyProductReviewPageObject;
-import pageObjects.AddressPageObject;
-import pageObjects.CustomerInfoPageObject;
-import pageObjects.PageGeneratorManager;
-import pageObjects.RegisterPageObject;
-import pageObjects.RewardPointPageObject;
+import pageObjects.nopCommer.user.UserAddressPageObject;
+import pageObjects.nopCommer.user.UserCustomerInfoPageObject;
+import pageObjects.nopCommer.user.UserHomePageObject;
+import pageObjects.nopCommer.user.UserLoginPageObject;
+import pageObjects.nopCommer.user.UserMyProductReviewPageObject;
+import pageObjects.nopCommer.user.PageGeneratorManager;
+import pageObjects.nopCommer.user.UserRegisterPageObject;
+import pageObjects.nopCommer.user.UserRewardPointPageObject;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -35,7 +35,7 @@ public class Level_07_Switch_Page extends BaseTest {
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
-		homePage = PageGeneratorManager.getHomePage(driver);
+		homePage = PageGeneratorManager.getUserHomePage(driver);
 		
 		firstName = "AutomationFcStudent";
 		lastName = "Loc";
@@ -45,7 +45,7 @@ public class Level_07_Switch_Page extends BaseTest {
 
 	@Test
 	public void User_01_Register() {
-		registerPage = homePage.clickToRegisterLink();
+		registerPage = homePage.openRegisterPage();
 		registerPage.inputToFirstNameTextbox(firstName);
 		registerPage.inputToLastNameTextbox(lastName);
 		registerPage.inputToEmailTextbox(emailAddress);
@@ -58,7 +58,7 @@ public class Level_07_Switch_Page extends BaseTest {
 
 	@Test
 	public void User_02_Login	() {
-		loginPage = homePage.clickToLoginLink();
+		loginPage = homePage.openUserLoginPage();
 		loginPage.InputToEmailTextbox(emailAddress);
 		loginPage.InputToPasswordTextbox(password);
 		loginPage.clickToLoginButton();
@@ -67,15 +67,17 @@ public class Level_07_Switch_Page extends BaseTest {
 
 	@Test
 	public void User_03_Customer_Infor() {
-		customerInforPage = homePage.clickToGoCustomerInforPage();
+		customerInforPage = homePage.openMyAccountPage();
 		Assert.assertTrue(customerInforPage.isCustomerInfoPageDisplayed());
 	}
 
 	@Test
 	public void User_04_Switch_Page() {
 		addressPage = customerInforPage.openAddressPage(driver);
+		myProductReviewPage = addressPage.openUserMyProductReviewPage(driver);
+		rewardPoinPage = myProductReviewPage.openUserRewardPointPage(driver);
+		customerInforPage = rewardPoinPage.openUserCustomerInfoPage(driver);
 	}
-
 
 	@AfterClass
 	public void afterClass() {
@@ -86,14 +88,14 @@ public class Level_07_Switch_Page extends BaseTest {
 		Random rad = new Random();
 		return rad.nextInt(999);
 	}
-
-	private CustomerInfoPageObject customerInforPage;
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
-	private AddressPageObject addressPage;
-	private MyProductReviewPageObject myProductReviewPage;
-	private RewardPointPageObject rewardPointPage;
+	
+	private UserRewardPointPageObject rewardPoinPage;
+	private UserMyProductReviewPageObject myProductReviewPage;
+	private UserCustomerInfoPageObject customerInforPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
+	private UserLoginPageObject loginPage;
+	private UserAddressPageObject addressPage;
 	private WebDriver driver;
 	private String emailAddress;
 	private String firstName;
