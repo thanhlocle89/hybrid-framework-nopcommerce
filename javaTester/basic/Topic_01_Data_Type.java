@@ -1,4 +1,4 @@
-package java.basic;
+package basic;
 
 public class Topic_01_Data_Type {
 

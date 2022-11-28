@@ -28,7 +28,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class Level_09_Dynamic_Page extends BaseTest {
+public class Level_12_Assert_Verify extends BaseTest {
 
 
 	@Parameters("browser")
@@ -52,7 +52,7 @@ public class Level_09_Dynamic_Page extends BaseTest {
 		registerPage.inputToPasswordTextbox(password);
 		registerPage.inputToConfirmPasswordTextbox(password);
 		registerPage.clickToRegisterButton();
-		verifyEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
+		verifyEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed....");
 		homePage = registerPage.clickToLogoutlink();
 	}
 
