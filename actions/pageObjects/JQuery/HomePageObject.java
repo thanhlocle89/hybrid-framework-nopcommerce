@@ -19,7 +19,7 @@ public class HomePageObject extends BasePage {
 	}
 
 	public void openPagingByPageNumber(String pageNumber) {
-		waitForEnableClickable(driver, HomePageUIs.PAGINATION_PAGE_BY_NUMBER, pageNumber);
+		waitForElementClickable(driver, HomePageUIs.PAGINATION_PAGE_BY_NUMBER, pageNumber);
 		clickToElement(driver, HomePageUIs.PAGINATION_PAGE_BY_NUMBER, pageNumber);
 	}
 
@@ -60,29 +60,29 @@ public class HomePageObject extends BasePage {
 
 	public void selectDropdownByColumnNameAtRowNumber(String columnName, String rowNumber, String value) {
 		int columnIndex = getElementSize(driver, HomePageUIs.COLUMN_INDEX_BY_NAME,columnName) +1;
-		waitForEnableClickable(driver, HomePageUIs.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,String.valueOf(columnIndex));
+		waitForElementClickable(driver, HomePageUIs.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,String.valueOf(columnIndex));
 		selectItemDefaultDropdown(driver, HomePageUIs.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX,value,rowNumber,String.valueOf(columnIndex));
 	}
 	
 	public void clickToLoadButton() {
-		waitForEnableClickable(driver, HomePageUIs.LOAD_BUTTON);
+		waitForElementClickable(driver, HomePageUIs.LOAD_BUTTON);
 		clickToElement(driver, HomePageUIs.LOAD_BUTTON);
 	}
 
 	public void checkToCheckboxByColumnNameAtRowNumber(String columnName, String rowNumber) {
 		int columnIndex = getElementSize(driver, HomePageUIs.COLUMN_INDEX_BY_NAME,columnName) +1;
-		waitForEnableClickable(driver, HomePageUIs.ROW_CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,String.valueOf(columnIndex));
+		waitForElementClickable(driver, HomePageUIs.ROW_CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,String.valueOf(columnIndex));
 		checkToDefaultCheckboxRadioButton(driver, HomePageUIs.ROW_CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,String.valueOf(columnIndex));
 	}
 	
 	public void uncheckToCheckboxByColumnNameAtRowNumber(String columnName, String rowNumber) {
 		int columnIndex = getElementSize(driver, HomePageUIs.COLUMN_INDEX_BY_NAME,columnName) +1;
-		waitForEnableClickable(driver, HomePageUIs.ROW_CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,String.valueOf(columnIndex));
+		waitForElementClickable(driver, HomePageUIs.ROW_CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,String.valueOf(columnIndex));
 		uncheckToDefaultCheckboxRadioButton(driver, HomePageUIs.ROW_CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,String.valueOf(columnIndex));
 	}
 
 	public void clickToIconByRowNumber(String rowNumber, String iconName) {
-		waitForEnableClickable(driver, HomePageUIs.ICON_LOCATOR, rowNumber,iconName);
+		waitForElementClickable(driver, HomePageUIs.ICON_LOCATOR, rowNumber,iconName);
 		clickToElement(driver, HomePageUIs.ICON_LOCATOR, rowNumber,iconName);
 
 	}

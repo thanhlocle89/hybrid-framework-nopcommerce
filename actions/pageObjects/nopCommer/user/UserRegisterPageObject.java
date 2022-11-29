@@ -14,7 +14,7 @@ public class UserRegisterPageObject extends BasePage {
 	}
 
 	public void clickToRegisterButton() {
-		waitForEnableClickable(driver, RegisterPageUI.REGISTER_BUTTON);
+		waitForElementClickable(driver, RegisterPageUI.REGISTER_BUTTON);
 		clickToElement(driver, RegisterPageUI.REGISTER_BUTTON);
 	}
 
@@ -75,7 +75,7 @@ public class UserRegisterPageObject extends BasePage {
 	}
 
 	public UserHomePageObject clickToLogoutlink() {
-		waitForEnableClickable(driver, RegisterPageUI.LOGOUT_LINK);
+		waitForElementClickable(driver, RegisterPageUI.LOGOUT_LINK);
 		clickToElement(driver, RegisterPageUI.LOGOUT_LINK);
 //		return new HomePageObject(driver);
 		return PageGeneratorManager.getUserHomePage(driver);
