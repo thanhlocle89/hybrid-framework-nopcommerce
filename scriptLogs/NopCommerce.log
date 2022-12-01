@@ -66,3 +66,48 @@
 [INFO ] [2022-12-01 00:40:46,829] Register - Step 05: Verify Account display
 [INFO ] [2022-12-01 00:40:46,898]  -------------------------- PASSED -------------------------- 
 [INFO ] [2022-12-01 00:40:47,570]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-01 00:43:13,587] Register - Step 01: Navigate to 'Login page'
+[INFO ] [2022-12-01 00:43:14,206] Register - Step 02: Enter to First Name text box with value is 'AutomationFcStudent'
+[INFO ] [2022-12-01 00:43:14,396] Register - Step 03: Enter to last name text box with value is 'Loc'
+[INFO ] [2022-12-01 00:43:14,564] Register - Step 04: Enter to Email address text box with value is 'afc850@gmail.com'
+[INFO ] [2022-12-01 00:43:14,744] Register - Step 05: Enter to password text box with value is '123456'
+[INFO ] [2022-12-01 00:43:14,897] Register - Step 06: Enter to confirm password text box with value is '123456'
+[INFO ] [2022-12-01 00:43:15,042] Register - Step 07: Click to Register button
+[INFO ] [2022-12-01 00:43:16,679] Register - Step 08: Verify register success
+[INFO ] [2022-12-01 00:43:16,745]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-01 00:43:16,745] Register - Step 09: Click to logout link
+[INFO ] [2022-12-01 00:43:17,466] Register - Step 01: Navigate to 'Login page'
+[INFO ] [2022-12-01 00:43:18,144] Register - Step 02: Enter to email address with value is 'afc850@gmail.com'
+[INFO ] [2022-12-01 00:43:18,296] Register - Step 03: Enter to password with value is '123456'
+[INFO ] [2022-12-01 00:43:18,450] Register - Step 04: Click to Login Button
+[INFO ] [2022-12-01 00:43:19,123] Register - Step 05: Verify Account display
+[INFO ] [2022-12-01 00:43:19,190]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-01 00:43:19,887]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-01 21:54:57,567] Register - Step 01: Navigate to 'Login page'
+[INFO ] [2022-12-01 21:54:58,285] Register - Step 02: Enter to First Name text box with value is 'AutomationFcStudent'
+[INFO ] [2022-12-01 21:54:58,485] Register - Step 03: Enter to last name text box with value is 'Loc'
+[INFO ] [2022-12-01 21:54:58,649] Register - Step 04: Enter to Email address text box with value is 'afc609@gmail.com'
+[INFO ] [2022-12-01 21:54:58,832] Register - Step 05: Enter to password text box with value is '123456'
+[INFO ] [2022-12-01 21:54:59,018] Register - Step 06: Enter to confirm password text box with value is '123456'
+[INFO ] [2022-12-01 21:54:59,186] Register - Step 07: Click to Register button
+[INFO ] [2022-12-01 21:55:01,267] Register - Step 08: Verify register success
+[INFO ] [2022-12-01 21:55:01,333]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-12-01 21:55:01,334] Register - Step 09: Click to logout link
+[INFO ] [2022-12-01 21:55:02,573] Register - Step 01: Navigate to 'Login page'
+[INFO ] [2022-12-01 21:55:03,985] Register - Step 02: Enter to email address with value is 'afc609@gmail.com'
+[INFO ] [2022-12-01 21:55:04,158] Register - Step 03: Enter to password with value is '123456'
+[INFO ] [2022-12-01 21:55:04,315] Register - Step 04: Click to Login Button
+[INFO ] [2022-12-01 21:55:06,015] Register - Step 05: Verify Account display
+[INFO ] [2022-12-01 21:55:06,089]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-01 21:55:07,462]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-01 22:08:17,047] Register - Step 01: Navigate to 'Login page'
+[INFO ] [2022-12-01 22:08:17,654] Register - Step 02: Enter to First Name text box with value is 'AutomationFcStudent'
+[INFO ] [2022-12-01 22:08:17,845] Register - Step 03: Enter to last name text box with value is 'Loc'
+[INFO ] [2022-12-01 22:08:18,008] Register - Step 04: Enter to Email address text box with value is 'afc770@gmail.com'
+[INFO ] [2022-12-01 22:08:18,187] Register - Step 05: Enter to password text box with value is '123456'
+[INFO ] [2022-12-01 22:08:18,337] Register - Step 06: Enter to confirm password text box with value is '123456'
+[INFO ] [2022-12-01 22:08:18,498] Register - Step 07: Click to Register button
+[INFO ] [2022-12-01 22:08:20,540] Register - Step 08: Verify register success
+[INFO ] [2022-12-01 22:08:20,727] Register - Step 01: Navigate to 'Login page'
+[INFO ] [2022-12-01 22:09:03,497]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-01 23:02:31,260]  -------------------------- PASSED -------------------------- 

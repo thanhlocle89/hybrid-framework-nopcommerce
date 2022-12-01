@@ -1,17 +1,1 @@
-[INFO ] [2022-12-01 00:40:40,836] Register - Step 01: Navigate to 'Login page'
-[INFO ] [2022-12-01 00:40:41,516] Register - Step 02: Enter to First Name text box with value is 'AutomationFcStudent'
-[INFO ] [2022-12-01 00:40:41,726] Register - Step 03: Enter to last name text box with value is 'Loc'
-[INFO ] [2022-12-01 00:40:41,956] Register - Step 04: Enter to Email address text box with value is 'afc343@gmail.com'
-[INFO ] [2022-12-01 00:40:42,280] Register - Step 05: Enter to password text box with value is '123456'
-[INFO ] [2022-12-01 00:40:42,499] Register - Step 06: Enter to confirm password text box with value is '123456'
-[INFO ] [2022-12-01 00:40:42,657] Register - Step 07: Click to Register button
-[INFO ] [2022-12-01 00:40:44,275] Register - Step 08: Verify register success
-[INFO ] [2022-12-01 00:40:44,336]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-01 00:40:44,336] Register - Step 09: Click to logout link
-[INFO ] [2022-12-01 00:40:45,081] Register - Step 01: Navigate to 'Login page'
-[INFO ] [2022-12-01 00:40:45,792] Register - Step 02: Enter to email address with value is 'afc343@gmail.com'
-[INFO ] [2022-12-01 00:40:45,951] Register - Step 03: Enter to password with value is '123456'
-[INFO ] [2022-12-01 00:40:46,098] Register - Step 04: Click to Login Button
-[INFO ] [2022-12-01 00:40:46,829] Register - Step 05: Verify Account display
-[INFO ] [2022-12-01 00:40:46,898]  -------------------------- PASSED -------------------------- 
-[INFO ] [2022-12-01 00:40:47,570]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-12-01 23:02:31,260]  -------------------------- PASSED -------------------------- 
