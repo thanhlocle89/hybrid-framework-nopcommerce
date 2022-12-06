@@ -3,7 +3,7 @@
 
 	<listeners>
 		<listener class-name="commons.MethodListener"/>
-		<listener class-name="reportConfig.AllureTestListener"/>
+<!--		<listener class-name="reportConfig.AllureTestListener"/> -->
 <!--		<listener class-name="reportConfig.ExtentTestListener"/> -->
 		<listener class-name="org.uncommons.reportng.HTMLReporter"/>
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
@@ -12,7 +12,8 @@
 	<test name="Run on Chrome">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.nopcommerce.user.Level_15_Allure" />
+			<class name="com.nopcommerce.common.Common_01_Register_Cookies" />
+			<class name="com.nopcommerce.user.Level_16_Cookies" />
 		</classes>
 	</test>
 
