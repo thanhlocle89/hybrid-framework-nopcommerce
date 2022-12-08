@@ -9,4 +9,7 @@ public class BasePageNopCommerceUI {
 	
 	public static String LOGOUT_LINK_AT_USER = "css=a[class='ico-logout']";
 	public static String LOGOUT_LINK_AT_ADMIN = "xpath=//a[text()='Logout']";
+	
+	public static String DYNAMIC_TEXTBOX_DY_ID = "xpath=//input[@id='%s']";
+	public static String DYNAMIC_BUTTON_BY_TEXT = "xpath=//button[text()='%s']";
 }

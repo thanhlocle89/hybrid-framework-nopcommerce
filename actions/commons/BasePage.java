@@ -227,12 +227,16 @@ public class BasePage {
 		}
 	}
 
-	public String getElementAttribute(WebDriver driver, String parentLocator, String name) {
-		return getWebElement(driver, parentLocator).getAttribute(name);
+	public String getElementAttribute(WebDriver driver, String locatorType, String name) {
+		return getWebElement(driver, locatorType).getAttribute(name);
 	}
 
-	public String getElementCssValue(WebDriver driver, String parentLocator, String propertyName) {
-		return getWebElement(driver, parentLocator).getCssValue(propertyName);
+	public String getElementAttribute(WebDriver driver, String locatorType, String name,String... dynamicValues) {
+		return getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)).getAttribute(name);
+	}
+
+	public String getElementCssValue(WebDriver driver, String locatorType, String propertyName) {
+		return getWebElement(driver, locatorType).getCssValue(propertyName);
 	}
 
 	public String getHexaColorFromRGBA(String rgbaValue) {
@@ -568,6 +572,21 @@ public class BasePage {
 		clickToElement(driver, BasePageNopCommerceUI.DYNAMIC_LINKS_MY_ACCOUNT_PAGE, pageName);
 	}
 
+	/**
+	 * @param driver
+	 * @param textboxId
+	 * @param value
+	 */
+	public void inputToTextBoxByID(WebDriver driver,String textboxId, String value) {
+		waitForElementVisible(driver, BasePageNopCommerceUI.DYNAMIC_TEXTBOX_DY_ID, textboxId);
+		sendKeyToElement(driver, BasePageNopCommerceUI.DYNAMIC_TEXTBOX_DY_ID, value, textboxId);
+	}
+	
+	public void clickToButtonByText(WebDriver driver,String textButton ) {
+		waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_BUTTON_BY_TEXT,textButton);
+		clickToElement(driver, BasePageNopCommerceUI.DYNAMIC_TEXTBOX_DY_ID,textButton);
+	}
+	
 	public UserHomePageObject clickToLogoutAtUserPage(WebDriver driver) {
 		waitForElementClickable(driver, BasePageNopCommerceUI.LOGOUT_LINK_AT_USER);
 		clickToElement(driver, BasePageNopCommerceUI.LOGOUT_LINK_AT_USER);

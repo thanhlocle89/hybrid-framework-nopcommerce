@@ -62,7 +62,7 @@ public class Level_17_Close_Browser extends BaseTest {
 	public void Search__06_Correct_Manufactorer() {
 		
 	}
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void afterClass() {
 		closeBrowserAndDriver();
 	}
